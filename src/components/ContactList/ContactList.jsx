@@ -1,37 +1,47 @@
-import ContactItem from '../ContactItem/ContactItem';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts, selectFilterInput, selectIsLoading } from 'redux/selectors';
-import { fetchContacts } from 'redux/operations';
+import { useSelector } from 'react-redux';
+import { PropTypes } from 'prop-types';
+import { ContactListItem } from '../ContactListItem/ContactListItem';
+import { List, Flex, Heading } from '@chakra-ui/react';
+import { selectContacts } from '../../redux/contacts/contactsSelectors';
+import { selectFilter } from '../../redux/filter/filterSelectors';
 
-const handleFilterChange = (contacts, filter) => {
-  if (filter) {
-    return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(filter.toLowerCase())
-    );
-  }
-  return contacts;
-};
-
-const ContactList = () => {
-  const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
+export const ContactList = () => {
+  const filter = useSelector(selectFilter);
   const contacts = useSelector(selectContacts);
-  const filterValue = useSelector(selectFilterInput);
-  const filtredContacts = handleFilterChange(contacts, filterValue.filter);
 
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
+  const getVisibleContacts = () => {
+    const normalizedFilter = filter.toLowerCase();
+
+    return contacts.filter(contact =>
+      contact.name.toLowerCase().includes(normalizedFilter)
+    );
+  };
 
   return (
-    <ul>
-      {!isLoading &&
-        filtredContacts.map(contact => {
-          return <ContactItem key={contact.id} contact={contact} />;
-        })}
-    </ul>
+    <>
+      {contacts.length > 0 ? (
+        <Flex justifyContent="center" alignItems="center" py="4">
+          <List maxW={[350, null, 500, null]} py="4" w="100%">
+            {getVisibleContacts().map(contact => (
+              <ContactListItem
+                key={contact.id}
+                name={contact.name}
+                number={contact.number}
+                id={contact.id}
+              />
+            ))}
+          </List>
+        </Flex>
+      ) : (
+        <Heading as="h2" size="lg" textAlign="center" mt="10">
+          You haven't saved contacts yet
+        </Heading>
+      )}
+    </>
   );
 };
 
-export default ContactList;
+ContactList.propTypes = {
+  visibleContacts: PropTypes.arrayOf(PropTypes.shape),
+  onDeleteContact: PropTypes.func,
+};
