@@ -2,6 +2,8 @@ import { useDispatch } from 'react-redux';
 import { Flex, Button, Text } from '@chakra-ui/react';
 import { logOut } from 'redux/auth/authOperations';
 import { useAuth } from 'hooks';
+import { FaUserSecret } from 'react-icons/fa';
+
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -9,11 +11,12 @@ export const UserMenu = () => {
 
   return (
     <Flex alignItems="center">
-      <Text fontSize={['sm', null, '3xl', 'null']}>
+      <Text fontSize={['sm', null, '3xl', 'null']} display="flex" alignItems="center">
         Welcome,
         <Text display="inline-block" color="white">
           {user.name}
         </Text>
+        <FaUserSecret ml={['2', null, '5', null]} />
       </Text>
       <Button
         colorScheme="black"

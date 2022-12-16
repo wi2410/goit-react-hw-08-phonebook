@@ -31,8 +31,8 @@ export const Navigation = () => {
           fontSize={['xl', null, '4xl', null]}
           _activeLink={{ color: 'white' }}
           _hover={{ color: 'white' }}
-            transition="color 250ms cubic-bezier(0.4, 0, 0.2, 1)"
-            display="flex" alignItems="center"
+          transition="color 250ms cubic-bezier(0.4, 0, 0.2, 1)"
+          display="flex" alignItems="center"
           to="/contacts"
           ><IoMdContacts size='32' />
           Contacts
