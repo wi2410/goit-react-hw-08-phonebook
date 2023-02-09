@@ -12,8 +12,8 @@ export const ContactListItem = ({ id, name, number }) => {
   };
   return (
     <ListItem key={id} minW={[300, null, 480, null]}>
-      <Flex justifyContent="space-between" alignItems="center" w="100%">
-        <Text fontSize={['sm', null, '2xl', 'null']}>
+      <Flex justifyContent="space-between" alignItems="center" w="100%" _hover={{ color: '#ffd700', bg: '#0057b8' }}>
+        <Text fontSize={['sm', null, '2xl', 'null']} >
           Name:
           <chakra.span color="white" ml="2" mr="4">
             {name}
@@ -27,13 +27,14 @@ export const ContactListItem = ({ id, name, number }) => {
           variant="outline"
           colorScheme="black"
           size="xs"
-          _hover={{ color: 'white' }}
-          bg="teal.400"
+          _hover={{ color: '#ffd700', bg: '#0057b8' }}
+          bg="white"
           fontWeight="normal"
           transition="color 250ms cubic-bezier(0.4, 0, 0.2, 1)"
           ml={['5', null, 'auto', null]}
           type="button"
           onClick={() => handleDeleteContact(id)}
+          borderRadius="10"
         >
           Delete
         </Button>

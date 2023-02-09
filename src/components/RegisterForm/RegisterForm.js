@@ -49,6 +49,9 @@ export const RegisterForm = () => {
         boxShadow="dark-lg"
         p="5"
         borderRadius="lg"
+        border="dotted"
+        // bg="#0057b8"
+        backgroundImage="url('https://www.smeinfo.com.my/wp-content/uploads/2021/02/step-to-register-768x461.png')"
       >
         <Formik
           initialValues={initialValues}
@@ -68,6 +71,7 @@ export const RegisterForm = () => {
                 type="text"
                 name="name"
                 placeholder="Enter your username"
+                borderRadius="10"
               ></Input>
               <ErrorMessage name="name" component="span"></ErrorMessage>
             </FormLabel>
@@ -83,6 +87,7 @@ export const RegisterForm = () => {
                 type="email"
                 name="email"
                 placeholder="Enter your email"
+                borderRadius="10"
               ></Input>
               <ErrorMessage name="email" component="span"></ErrorMessage>
             </FormLabel>
@@ -98,6 +103,7 @@ export const RegisterForm = () => {
                 type="password"
                 name="password"
                 placeholder="Enter your password"
+                borderRadius="10"
               ></Input>
               <ErrorMessage name="password" component="span"></ErrorMessage>
             </FormLabel>
@@ -108,11 +114,12 @@ export const RegisterForm = () => {
                 variant="outline"
                 colorScheme="black"
                 fontWeight="normal"
-                bg="teal.400"
+                bg="white"
                 fontSize={['lg', null, '2xl', null]}
-                _hover={{ color: 'white' }}
+                _hover={{ color: '#ffd700' }}
                 transition="color 250ms cubic-bezier(0.4, 0, 0.2, 1)"
                 type="submit"
+                borderRadius="10"
               >
                 Register
               </Button>
@@ -125,9 +132,9 @@ export const RegisterForm = () => {
                 as={NavLink}
                 to="/login"
                 ml="2"
-                color="teal.200"
+                color="white"
                 fontSize={['lg', null, '3xl', null]}
-                _hover={{ color: 'white' }}
+                _hover={{ color: '#ffd700' }}
                 transition="color 250ms cubic-bezier(0.4, 0, 0.2, 1)"
               >
                 Sign in

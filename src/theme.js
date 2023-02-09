@@ -3,12 +3,13 @@ import '@fontsource/caveat';
 
 export const theme = extendTheme({
 
-  fonts: { body: `"URW Chancery L", cursive`, heading: `"URW Chancery L", cursive` },
+  fonts: { body: `"Montserrat", Italic`, heading: `"Montserrat", Italic` },
 
   styles: {
     global: {
       body: {
-        bg: '#ffd700',
+        // bg: '#ffd700',
+        background:'url(https://www.atypyk.com/443-large_default/phonebook.jpg) center/cover no-repeat',
         color: 'black',
         fontSize: '2xl',
       },

@@ -23,6 +23,7 @@ export const Filter = () => {
             name="filter"
             value={filter}
             onChange={e => dispatch(changeFilter(e.currentTarget.value))}
+            borderRadius="10"
           ></Input>
         </FormLabel>
       </Box>

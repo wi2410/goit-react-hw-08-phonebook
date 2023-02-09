@@ -23,13 +23,17 @@ export const App = () => {
 
   return (
     <Container
-      maxW="container.lg"
-      minH="container.lg"
-      minW={['300px', null, '800px', null]}
-      p="7"
-      boxShadow="dark-lg"
-      borderRadius="lg"
-      bg="#0057b8"
+      // backgroundImage="url('/img/phonebook.jpg')"
+      // maxW="container.lg"
+      // minH="container.lg"
+      // minW={['700px', null, '800px', null]}
+      // p="7"
+      // boxShadow="dark-lg"
+      // borderRadius="lg"
+      // border="dashed"
+      // backgroundImage="url('./img/phonebook.jpg')"
+      // backgroundPosition="center"
+      // backgroundRepeat="no-repeat"
     >
       {isRefreshing ? (
         <Heading

@@ -1,5 +1,5 @@
 import { Heading } from '@chakra-ui/react';
-import { GiNotebook } from "react-icons/gi";
+// import { GiNotebook } from "react-icons/gi";
 import { Flex, Text, Box } from '@chakra-ui/react';
 import { useAuth } from 'hooks';
 
@@ -14,7 +14,7 @@ export default function Home() {
       mt="10"
       
     >
-      <GiNotebook size="300px"/>
+      {/* <GiNotebook size="300px"/> */}
       <Box ml={['3', null, '8', null]} p={['1', null, '8', null]} maxW="500px">
         <Heading
             as="h1"

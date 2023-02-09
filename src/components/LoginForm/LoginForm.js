@@ -44,10 +44,15 @@ export const LoginForm = () => {
     <Flex alignItems="center" justifyContent="center">
       <Box
         minW={[300, null, 480, null]}
-        minH="380px"
+        minH="500px"
         boxShadow="dark-lg"
         p="5"
         borderRadius="lg"
+        border="dotted"
+        // bg="#0057b8"
+        backgroundImage="url('https://safekaro.com/images/login.png')"
+        backgroundPosition="bottom"
+        backgroundRepeat="no-repeat"
       >
         <Formik
           initialValues={initialValues}
@@ -67,6 +72,7 @@ export const LoginForm = () => {
                 type="email"
                 name="email"
                 placeholder="Enter your email"
+                borderRadius="10"
               ></Input>
               <ErrorMessage name="email" component="span"></ErrorMessage>
             </FormLabel>
@@ -82,6 +88,7 @@ export const LoginForm = () => {
                 type="password"
                 name="password"
                 placeholder="Enter your password"
+                borderRadius="10"
               ></Input>
               <ErrorMessage name="password" component="span"></ErrorMessage>
             </FormLabel>
@@ -91,11 +98,12 @@ export const LoginForm = () => {
                 variant="outline"
                 colorScheme="black"
                 fontWeight="normal"
-                bg="teal.400"
+                bg="white"
                 fontSize={['lg', null, '2xl', null]}
-                _hover={{ color: 'white' }}
+                _hover={{ color: '#ffd700' }}
                 transition="color 250ms cubic-bezier(0.4, 0, 0.2, 1)"
                 type="submit"
+                borderRadius="10"
               >
                 LogIn
               </Button>
@@ -108,9 +116,9 @@ export const LoginForm = () => {
                 as={NavLink}
                 to="/register"
                 ml="2"
-                color="teal.200"
+                color="white"
                 fontSize={['lg', null, '3xl', null]}
-                _hover={{ color: 'white' }}
+                _hover={{ color: '#ffd700' }}
                 transition="color 250ms cubic-bezier(0.4, 0, 0.2, 1)"
               >
                 Sign up

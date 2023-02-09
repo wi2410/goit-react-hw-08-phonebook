@@ -10,7 +10,7 @@ export const Navigation = () => {
 
   return (
     <Flex alignItems="center">
-      <Show above='md'><GiNotebook size='32'/></Show>
+      <Show above='md'><GiNotebook size='32' fill='white'/></Show>
       <Link
         as={NavLink}
         ml={['1', null, '5', null]}
@@ -19,6 +19,7 @@ export const Navigation = () => {
         _hover={{ color: 'white' }}
         transition="color 250ms cubic-bezier(0.4, 0, 0.2, 1)"
         to="/"
+        mr="5" borderRadius="10" border="solid" p="1.5"
       >
         Home
       </Link>
@@ -27,6 +28,7 @@ export const Navigation = () => {
         
         <Link
           as={NavLink}
+          m="5"
           ml={['2', null, '5', null]}
           fontSize={['xl', null, '4xl', null]}
           _activeLink={{ color: 'white' }}

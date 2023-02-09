@@ -17,7 +17,7 @@ export default function Contacts() {
 
   return (
     <>
-      <Heading as="h2" size="xl" textAlign="center" mb="7">
+      <Heading as="h2" size="xl" textAlign="center" mb="7" >
         Contacts
       </Heading>
       <ContactForm></ContactForm>

@@ -13,7 +13,7 @@ export const AuthNav = () => {
         transition="color 250ms cubic-bezier(0.4, 0, 0.2, 1)"
         to="/register"
       >
-        <Text mr="5">Register</Text>
+        <Text mr="5" borderRadius="10" border="solid" p="1.5">Register</Text>
       </Link>
       <Link
         as={NavLink}
@@ -24,7 +24,7 @@ export const AuthNav = () => {
         transition="color 250ms cubic-bezier(0.4, 0, 0.2, 1)"
         to="/login"
       >
-        <Text>Login</Text>
+        <Text mr="5" borderRadius="10" border="solid" p="1.5">Login</Text>
       </Link>
     </Flex>
   );

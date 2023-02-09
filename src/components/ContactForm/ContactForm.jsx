@@ -48,6 +48,10 @@ export const ContactForm = () => {
         boxShadow="dark-lg"
         p="5"
         borderRadius="lg"
+        // bg="#0057b8"
+        backgroundImage="url('https://f.hubspotusercontent00.net/hubfs/53/Sales%20Team%20Planning%20How%20to%20Sync%20iCloud%20Contacts%20with%20Outlook.jpg')"
+        backgroundPosition="bottom"
+        backgroundRepeat="no-repeat"
       >
         <Formik
           initialValues={initialValues}
@@ -66,6 +70,7 @@ export const ContactForm = () => {
                 type="text"
                 name="name"
                 placeholder="Enter contact name"
+                borderRadius="10"
               ></Input>
               <ErrorMessage name="name" component="span"></ErrorMessage>
             </FormLabel>
@@ -80,6 +85,7 @@ export const ContactForm = () => {
                 type="tel"
                 name="number"
                 placeholder="Enter phone number"
+                borderRadius="10"
               ></Input>
               <ErrorMessage name="number" component="span"></ErrorMessage>
             </FormLabel>
@@ -89,10 +95,11 @@ export const ContactForm = () => {
                 colorScheme="black"
                 type="submit"
                 fontWeight="normal"
-                bg="teal.400"
+                bg="white"
                 fontSize={['lg', null, '2xl', null]}
-                _hover={{ color: 'white' }}
+                _hover={{ color: '#ffd700' }}
                 transition="color 250ms cubic-bezier(0.4, 0, 0.2, 1)"
+                borderRadius="10"
               >
                 Add contact
               </Button>
