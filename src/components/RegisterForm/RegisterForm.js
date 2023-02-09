@@ -134,7 +134,7 @@ export const RegisterForm = () => {
                 ml="2"
                 color="white"
                 fontSize={['lg', null, '3xl', null]}
-                _hover={{ color: '#ffd700' }}
+                _hover={{ color: '#0057b8' }}
                 transition="color 250ms cubic-bezier(0.4, 0, 0.2, 1)"
               >
                 Sign in
